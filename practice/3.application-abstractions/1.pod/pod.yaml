@@ -10,4 +10,16 @@ spec:
     name: nginx
     ports:
     - containerPort: 80
-...
+
+---
+#second document
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-second
+spec:
+  containers:
+    - image: quay.io/testing-farm/nginx:1.12
+      name: nginx-second
+      ports:
+        - containerPort: 80
